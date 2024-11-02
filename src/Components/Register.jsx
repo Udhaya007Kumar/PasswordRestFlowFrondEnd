@@ -20,7 +20,7 @@ const Register = () => {
     const payload = { username, email, password };
 
     try {
-        const res = await axios.post("http://localhost:4000/api/auth/register", payload);
+        const res = await axios.post("https://passwordrestflow-gyxy.onrender.com/api/auth/register", payload);
         toast.success(res.data.message);
         navigate("/");
     } catch (error) {

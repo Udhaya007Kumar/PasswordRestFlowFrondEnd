@@ -16,7 +16,7 @@ const Forgotpassword = () => {
     const handleSubmit = async(e)=>{
         e.preventDefault();
         const payload = {email};
-        await axios.post("http://localhost:4000/api/auth/forgotpassword",payload)
+        await axios.post("https://passwordrestflow-gyxy.onrender.com/api/auth/forgotpassword",payload)
         .then((res)=>{toast.success(res.data.message)
             settoken(res.data.token)
             navigate("/home")

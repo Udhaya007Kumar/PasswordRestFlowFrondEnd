@@ -23,7 +23,7 @@ const Login = () => {
     const handleSubmit = async(e)=>{
         e.preventDefault();
         const payload = {email,password};
-        await axios.post("http://localhost:4000/api/auth/login",payload)
+        await axios.post("https://passwordrestflow-gyxy.onrender.com/api/auth/login",payload)
         .then((res)=>{toast.success(res.data.message)
             settoken(res.data.token)
             navigate("/home")

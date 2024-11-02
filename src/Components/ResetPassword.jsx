@@ -20,7 +20,7 @@ const ResetPassword = () => {
         const payload = { password };
     
         try {
-            const res = await axios.post(`http://localhost:4000/api/auth/reset-password/${id}/${otp}`, payload);
+            const res = await axios.post(`https://passwordrestflow-gyxy.onrender.com/api/auth/reset-password/${id}/${otp}`, payload);
             toast.success(res.data.message);
             settoken(res.data.token);
             navigate("/")
